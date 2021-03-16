@@ -1,3 +1,24 @@
+## MARKS 
+
+**GRADE : A**
+
+Administrative details (2 / 2) :
+
+about.json (4 / 4) :
+
+Number of services (2 / 3) :
+
+Number of widgets (2 / 3) :
+
+Number of services with user authentication (1 / 4) :
+Google
+User management (6 / 6) :
+Oauth google et twitter
+Widget management (5 / 5) :
+
+Timer update (3 / 3) :
+
+
 <h1>Documentation de Dashboard:</h1>
 
 ***
