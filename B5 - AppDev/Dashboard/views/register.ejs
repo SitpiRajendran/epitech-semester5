@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard - Register</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+		<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+<body>
+	<img class="wave" src="../img/wave.png">
+	<div class="topnav">
+		<a href="/users/login" class="menubutton"> SE CONNECTER</a>
+		<a href="/#widget">Widgets</a>
+		<a href="/#about">À propos</a>
+		<a class="active" href="/">Acceuil</a>
+		<div class="nav-header">
+			<div class="nav-title">
+				<h1 class="title is-capitalized has-text-weight-bold">EPIDASH</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container-top">
+		<div class="img">
+			<img src="../img/screen.svg">
+		</div>
+		<div class="login-content">
+			<form action="/users/register" method="POST">
+				<img src="../img/avatar.png">
+				<h2 class="title">Bienvenue</h2>
+				<%	if(typeof errors != 'undefined') {%>
+						<%errors.forEach(function(error) {%>
+							<div class="notification is-danger p-1">
+								<%= error.msg %>
+							</div>
+				<% 		})
+					}%>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" class="input" id="name" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
+					</div>
+				</div>
+				<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+					</div>
+        		   <div class="div">
+           		   		<h5>Mail</h5>
+           		   		<input type="email" class="input" id="email" name="email" value="<%= typeof email != 'undefined' ? email : '' %>">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Mot de Passe</h5>
+           		    	<input type="password" class="input" id="password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+            	   </div>
+				</div>
+				<div class="input-div pass">
+					<div class="i"> 
+						 <i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						 <h5>Confirmez le mot de Passe</h5>
+						 <input type="password" class="input" id="password2"  name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+				 </div>
+			  </div>
+				<input type="submit" class="btn" style="width: 100%;" value="s'inscrire">
+				<a href="/users/login">J'ai déjà un compte</a>
+			</form>
+        </div>
+	</div>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

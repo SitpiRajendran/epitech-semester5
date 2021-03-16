@@ -1,0 +1,36 @@
+<style>
+    .Git {
+        background-size: cover;
+    }
+</style>
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-dark" id="GithubWidget-<%=widget.position%>">
+        <div class="columns">
+            <div class="column p-1">
+                <input class="input" id="GithubSearchName-<%=widget.position%>" value="SitpiRajendran"></h3>
+            </div>
+            <div class="column p-1">
+                <button class="button" onclick="StartGithubUpdate()">Rechercher</button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column p-1 is-one-quarter">
+                <img class="image is-96x96 m-2" src="/img/github_icon.png" id="GitIcon-<%=widget.position%>" />
+            </div>
+            <div class="column">
+                <div class="columns">
+                    <div class="column is-narrow p-1">
+                        <h3 class="title is-4" style="text-transform: capitalize;" id="GithubName-<%=widget.position%>">
+                            Loading</h3>
+                        <h1 class="subtitle is-6" id="GithubLoc-<%=widget.position%>">Getting infos...</h1>
+                    </div>
+                    <div class="column has-text-right-desktop p-1">
+                        <p id="GithubProjets-<%=widget.position%>"></p>
+                        <p id="GithubViewers-<%=widget.position%>"></p>
+                    </div>
+                </div>
+                <p style="margin: -0.5em;" id="GithubDesc-<%=widget.position%>"></p>
+            </div>
+        </div>
+    </div>
+</div>

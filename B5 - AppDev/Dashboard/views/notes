@@ -1,0 +1,149 @@
+
+<body>
+	<div class="imageback">
+		<div class="topnav">
+			<a href="/users/register" class="menubutton"> S'INSCRIRE</a>
+			<a href="/#widget">Widgets</a>
+			<a href="/#about">À propos</a>
+			<a class="active" href="/">Acceuil</a>
+			<div class="nav-header">
+				<div class="nav-title">
+					<h1 class="title is-capitalized has-text-weight-bold">EPIDASH</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container-top">
+			<div class="img">
+				<img src="../img/screen.svg">
+			</div>
+			<div class="login-content">
+				<form action="/users/login" method="POST">
+					<% if(typeof errors != 'undefined') {%>
+					<%errors.forEach(function(error) {%>
+					<p>
+						<%error.msg%>
+					</p>
+					<%; console.log(error.msg)});console.log("**\n")}%>
+					<img src="../img/avatar.png">
+					<h2 class="title">Bienvenue</h2>
+					<div class="input-div one">
+						<div class="i">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="div">
+							<h5>Mail</h5>
+							<input type="email" class="input" id="email" name="email">
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i">
+							<i class="fas fa-lock"></i>
+						</div>
+						<div class="div">
+							<h5>Mot de Passe</h5>
+							<input type="password" class="input" id="password" name="password">
+						</div>
+					</div>
+					<a href="#">Mot de Passe Oublié ?</a>
+					<div style="width:100%;">
+						<input type="submit" class="btn" value="Login">
+						<a href="/users/register"><button type="button" class="btn-register"
+								value="Register">S'Inscrire</button></a>
+					</div>
+					<a href="/google" style="margin: 5em 0 0 0;">
+						<img src="/img/google.png" style="width: 100%; height: 70%;">
+					</a>
+					<a href="/twitter" style="margin: 0;">
+						<img src="/img/twitter-bar.png" style="width: 100%; height: 70%;">
+					</a>
+					<!-- 					<a href="/github" style="margin: 0;">
+						<img src="/img/github.png" style="width: 100%; height: 70%;">
+					</a> -->
+				</form>
+			</div>
+		</div>
+	</div>
+	<section class="section" style="background-color: #6f31e2;" id="about">
+		<div class="container">
+			<h1 class="title is-size-2 center has-text-white">Qui sommes-nous ?</h1>
+			<div class="columns">
+				<div class="column">
+					<div class="notification has-text-black">
+						<h1 class="title is-size-4">Roméo TALOVICI</h1>
+						Etudiant de 3° Année à Epitech, passioné de réseau et de tout ce qui est câble ethernet.
+					</div>
+				</div>
+				<div class="column">
+					<div class="notification has-text-black">
+						<h1 class="title is-size-4">Sitpi Rajendran</h1>
+						Etudiant de 3° Année à Epitech, passioné de tout et de rien, tout le monde le connait.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- .section -->
+	<section class="section" id="widget">
+		<div class="container">
+			<h1 class="title is-size-2 center has-text-black">Nos Services</h1>
+			<div class="columns is-multiline">
+				<div class="column is-one-third">
+					<article class="media notification has-background-white">
+						<figure class="media-left">
+							<span class="icon">
+								<i class="fas fa-lg fa-dollar-sign has-text-success"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Bourse</h1>
+								<p class="subtitle is-size-5">
+									Deux widgets, l'un est un convertisseur de devise, et l'autre est la bourse de New
+									York.
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="media notification has-background-white">
+						<figure class="media-left">
+							<span class="icon has-text-warning">
+								<i class="fas fa-lg fa-smog"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Météo</h1>
+								<p class="subtitle is-size-5">
+									Que vous voulez voir la météo actuelle, sur une semaine, ou même dans deux villes en
+									même temps, c'est possible
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="media notification has-background-white">
+						<figure class="media-left">
+							<span class="icon has-text-dark">
+								<i class="fas fa-lg fa-folder-plus"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Plus encore</h1>
+								<p class="subtitle is-size-5">
+									Des widgets si vous êtes à Epitech, si vous utilisez le Calendrier Google et plus
+									encore sont disponibles.
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<a href="/Documentations/Documentation_user.md"><button type="button" class="btn is-centered">Voir notre documentation</button></a>
+		</div>
+	</section>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>

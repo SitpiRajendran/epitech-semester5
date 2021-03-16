@@ -1,0 +1,32 @@
+<div class="field">
+    <label class="label">Taux de Rafraichissement</label>
+    <div class="control">
+        <input type="range" name="param1" min="30000" max="300000" step="10000" value="<%= widget.param1 %>" id="param1" onchange="updateTextInput(this.value);"/>
+        <output id="textOutput" value="<%= widget.param1 %>">
+      </div>
+    <p class="help">en ms - Minimum 30 000</p>
+</div>
+<br>
+<hr width="75%">
+<br>
+<label for="cars">Type de film</label>
+<div class="field">
+    <input type="checkbox" id="param2" value="<%= widget.param2 %>" checked required>
+    <label>Comédie</label>
+    <br>
+    <input type="checkbox" id="param3" value="<%= widget.param3 %>" checked required>
+    <label>Drama</label>
+    <br>
+    <input type="checkbox" id="param4" value="<%= widget.param4 %>" checked required>
+    <label>Horror</label>
+    <br>
+    <input type="checkbox" id="param5" value="<%= widget.param5 %>" checked required>
+    <label>Thriller</label>
+    <br>
+    <br>
+</div>
+<script>
+    function updateTextInput(val) {
+              document.getElementById('textOutput').value=val; 
+            }
+    </script>

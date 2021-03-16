@@ -1,0 +1,26 @@
+<style>
+    .date_column {column-width: 100px;}
+    .FindMovie {background-size: cover;}
+    .widgetmovie {background-size: cover;}
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-warning widgetmovie" id="FindMovieWidget-<%=widget.position%>">
+        <section class="section p-2">
+            <div class="container">
+                <input class="form_field input" style="color: #000000;" id="SearchNewFilm-<%=widget.position%>" value="Tout nous sépare"
+                    oninput="StartMovieUpdate()" placeholder="Type a movie name">
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column" style="margin: 1em;">
+                <h1 class="title is-3" style="color: #FFFFFF;" id="FindMovieName-<%=widget.position%>">Le Super Film De La Mort Qui Tue</h1>
+                <h1 class="subtitle is-6" style="color: #FFFFFF;" id="FindMovieDate-<%=widget.position%>">01 Janvier 0001</h1>
+                <h1 class="subtitle is-6" style="color: #FFFFFF;" id="FindMovieRate-<%=widget.position%>">5.00</h1>
+            </div>
+            <div class="column">
+                <p style="color: #FFFFFF;" id="FindMovieDescr-<%=widget.position%>">A great Movie</p>
+            </div>
+        </div>
+    </div>
+</div>

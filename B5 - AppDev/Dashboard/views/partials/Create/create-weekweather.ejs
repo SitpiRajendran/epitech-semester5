@@ -1,0 +1,80 @@
+<style>
+    .weather {
+        background-size: cover;
+    }
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-primary weather m-0 p-0" id="weekWeatherWidget-<%=widget.position%>">
+        <div class="columns is-gapless">
+            <div class="columns is-gapless weather pl-5 pr-5 pt-5 m-0" id="weekWeatherWidget1-<%=widget.position%>"
+                style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) ), url(/img/weather_background/cloud-night.jpeg);">
+                <div class="column">
+                    <img class="image is-64x64" src="/img/weather_icon/04n.png"
+                        id="weekWeatherIcon1-<%=widget.position%>">
+                </div>
+                <div class="column is-narrow">
+                    <h1 class="subtitle is-4" style="text-transform: capitalize;"
+                        id="weekWeatherDescription1-<%=widget.position%>">nuageux</h1>
+                    <h1 class="title is-3" id="weekWeatheTemperature1-<%=widget.position%>">19.5° </h1>
+                    <p id="weekWeatherCity1-<%=widget.position%>">Préfecture de Tokyozuka, JP</p>
+                    <p class="pb-3">Demain</p>
+                </div>
+            </div>
+            <div class="column m-2">
+                <article class="media m-0 pt-2">
+                    <figure class="media-left">
+                        <p class="image is-32x32">
+                            <img src="/img/weather_icon/09n.png" id="weekWeatherIcon2-<%=widget.position%>">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h3 class="title is-6 m-0" style="text-transform: capitalize;"
+                                id="weekWeatherDescription2-<%=widget.position%>">Légère Pluie - 36°</h3>
+                        </div>
+                    </div>
+                </article>
+                <article class="media m-0 pt-2">
+                    <figure class="media-left">
+                        <p class="image is-32x32">
+                            <img src="/img/weather_icon/09n.png" id="weekWeatherIcon3-<%=widget.position%>">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h3 class="title is-6 m-0" style="text-transform: capitalize;"
+                                id="weekWeatherDescription3-<%=widget.position%>">Légère Pluie - 36°</h3>
+                        </div>
+                    </div>
+                </article>
+                <article class="media m-0 pt-2">
+                    <figure class="media-left">
+                        <p class="image is-32x32">
+                            <img src="/img/weather_icon/09n.png" id="weekWeatherIcon4-<%=widget.position%>">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h3 class="title is-6 m-0" style="text-transform: capitalize;"
+                                id="weekWeatherDescription4-<%=widget.position%>">Légère Pluie - 36°</h3>
+                        </div>
+                    </div>
+                </article>
+                <article class="media m-0 pt-2">
+                    <figure class="media-left">
+                        <p class="image is-32x32">
+                            <img src="/img/weather_icon/09n.png" id="weekWeatherIcon5-<%=widget.position%>">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h3 class="title is-6 m-0" style="text-transform: capitalize;"
+                                id="weekWeatherDescription5-<%=widget.position%>">Légère Pluie - 36°</h3>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

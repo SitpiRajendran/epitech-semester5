@@ -1,0 +1,9 @@
+# Temporary
+*~
+*#
+
+# Env
+*.tmp
+
+# Build
+node_modules/

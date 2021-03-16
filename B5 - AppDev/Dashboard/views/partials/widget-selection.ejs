@@ -1,0 +1,101 @@
+<%
+
+if (widgets.length == 0) { %>
+<p><b>Vous n'avez pas encore de Widgets :-( </b> Ajoutez en via la page <a href="/widgets">"Widgets"</a></p>
+<%}
+
+for (let i = 1; i <= user.widgetnumber; i++) {
+    var actualwidget = widgets.filter(widget => widget.position === i);
+    if (actualwidget.length > 0) {
+        actualwidget.forEach(function(widget) {%>
+<%-include('./Create/create-'+widget.widgetname, {widget: widget, user: user});-%>
+<%      })
+    }
+}
+%>
+
+%>
+<%
+var liveweather = widgets.filter(widget => widget.widgetname === "liveweather");
+if (liveweather.length > 0) {%>
+<script src="/js/Weather/liveweather.js" allwidgets='<%-JSON.stringify(liveweather)%>'></script>
+<%}%>
+
+<%
+var doubleweather = widgets.filter(widget => widget.widgetname === "doubleweather");
+if (doubleweather.length > 0) {%>
+<script src="/js/Weather/doubleweather.js" allwidgets='<%-JSON.stringify(doubleweather)%>'></script>
+<%}%>
+
+<%
+var weekweather = widgets.filter(widget => widget.widgetname === "weekweather");
+if (weekweather.length > 0) {%>
+<script src="/js/Weather/weekweather.js" allwidgets='<%-JSON.stringify(weekweather)%>'></script>
+<%}%>
+
+<%
+var numerictime = widgets.filter(widget => widget.widgetname === "numerictime");
+if (numerictime.length > 0) {%>
+<script src="/js/Horloge/numerictime.js" allwidgets='<%-JSON.stringify(numerictime)%>'></script>
+<%}%>
+
+<%
+var analogictime = widgets.filter(widget => widget.widgetname === "analogictime");
+if (analogictime.length > 0) {%>
+<script src="/js/Horloge/analogictime.js" allwidgets='<%-JSON.stringify(analogictime)%>'></script>
+<%}%>
+
+<%
+var epitechinfos = widgets.filter(widget => widget.widgetname === "epitechinfos");
+if (epitechinfos.length > 0) {%>
+<script src="/js/Epitech/epitechinfos.js" allwidgets='<%-JSON.stringify(epitechinfos)%>'></script>
+<%}%>
+
+<%
+var currencyconverter = widgets.filter(widget => widget.widgetname === "currencyconverter");
+if (currencyconverter.length > 0) {%>
+<script src="/js/Bourse/currencyconverter.js" allwidgets='<%-JSON.stringify(currencyconverter)%>'></script>
+<%}%>
+
+<%
+var stockexchanges = widgets.filter(widget => widget.widgetname === "stockexchanges");
+if (stockexchanges.length > 0) {%>
+<script src="/js/Bourse/stockexchanges.js" allwidgets='<%-JSON.stringify(stockexchanges)%>'></script>
+<%}%>
+
+<%
+var twitteraccount = widgets.filter(widget => widget.widgetname === "twitteraccount");
+if (twitteraccount.length > 0) {%>
+<script src="/js/Twitter/twitteraccount.js" allwidgets='<%-JSON.stringify(twitteraccount)%>'
+    user='<%-JSON.stringify(user)%>'></script>
+<%}%>
+
+<%
+var findmovie = widgets.filter(widget => widget.widgetname === "findmovie");
+if (findmovie.length > 0) {%>
+<script src="/js/Cinema/findmovie.js" allwidgets='<%-JSON.stringify(findmovie)%>'></script>
+<%}%>
+
+<%
+var googlenews = widgets.filter(widget => widget.widgetname === "googlenews");
+if (googlenews.length > 0) {%>
+<script src="/js/Google/googlenews.js" allwidgets='<%-JSON.stringify(googlenews)%>'></script>
+<%}%>
+
+<%
+var serverpinger = widgets.filter(widget => widget.widgetname === "serverpinger");
+if (serverpinger.length > 0) {%>
+<script src="/js/Server/serverpinger.js" allwidgets='<%-JSON.stringify(serverpinger)%>'></script>
+<%}%>
+
+<%
+var sickness = widgets.filter(widget => widget.widgetname === "sickness");
+if (sickness.length > 0) {%>
+<script src="/js/Medical/sickness.js" allwidgets='<%-JSON.stringify(sickness)%>'></script>
+<%}%>
+
+<%
+var githubaccount = widgets.filter(widget => widget.widgetname === "githubaccount");
+if (githubaccount.length > 0) {%>
+<script src="/js/Github/githubaccount.js" allwidgets='<%-JSON.stringify(githubaccount)%>'></script>
+<%}%>

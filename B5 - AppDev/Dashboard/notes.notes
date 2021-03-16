@@ -1,0 +1,48 @@
+HTML :
+-> Get widgets
+
+MondoDB:
+Widgets List :
+username / widgetname / param1 / param2 / param3
+
+JS :
+
+GetfromDB(username):
+forEach(
+    if (widget == "horloge_one")
+        include ("hotlogeone.js");
+    if (widget == "horloge_one")
+        include ("hotlogeone.js");
+    if (widget == "horloge_one")
+        include ("hotlogeone.js");
+)
+
+
+					<%errors.forEach(function(error) {%>
+					<p>
+					  <%=error.msg%>
+				  </p>
+				  <%; console.log(error.msg)});
+				  console.log("**\n")}%>
+
+                      <%- include('./presentation-tile', {
+        iconname: "/img/cinema_icon.png",
+        title: "Cinema List",
+        subtitle: "Cinema",
+        description: "Quels films sont de sorties ce mois ci ?",
+        widgetname: "cinemalist",
+    }); -%>
+
+
+<!-- //////// SERVICE Twitter //////// -->
+<h2 class="title is-3">Twitter</h2>
+<div class="columns is-multiline is-mobile is-narrow-desktop">
+    <%- include('./presentation-tile', {
+        iconname: "/img/twitter_icon.png",
+        title: "Twitter Account",
+        subtitle: "Twitter",
+        description: "Compte follow & followers twitter en direct !",
+        widgetname: "twitteraccount",
+    }); -%>
+</div>
+<br>

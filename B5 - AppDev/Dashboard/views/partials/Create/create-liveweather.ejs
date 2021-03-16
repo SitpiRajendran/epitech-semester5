@@ -1,0 +1,26 @@
+<style>
+    .weather {
+        background-size: cover;
+    }
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-primary weather" id="weatherWidget-<%=widget.position%>">
+        <div class="columns is-gapless">
+            <div class="column">
+                <img src="/img/weather_icon/09n.png" id="weatherIcon-<%=widget.position%>" />
+            </div>
+            <div class="column is-narrow" style="margin-top: 0.5em;">
+                <h1 class="subtitle is-4" style="text-transform: capitalize;"
+                    id="weatherDescription-<%=widget.position%>">
+                    Sunny</h1>
+                <h1 class="title is-3" id="weatherTemperature-<%=widget.position%>">36°</h1>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+                <p id="weatherCity-<%=widget.position%>">San Francisco</p>
+            </div>
+        </div>
+    </div>
+</div>

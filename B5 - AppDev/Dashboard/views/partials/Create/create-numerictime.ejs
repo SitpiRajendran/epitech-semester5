@@ -1,0 +1,53 @@
+<style>
+  .date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .time span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .time span:last-child {
+    background: #ffffff;
+    color: hsl(204, 86%, 53%);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+  <div class="notification is-info weather" id="numericWidget-<%=widget.position%>">
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname-<%=widget.position%>">Day</span>
+        <span id="daynum-<%=widget.position%>">00</span>
+        <span id="month-<%=widget.position%>">Month</span>
+        <span id="year-<%=widget.position%>">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour-<%=widget.position%>">00</span>:
+        <span id="minutes-<%=widget.position%>">00</span>:
+        <span id="seconds-<%=widget.position%>">00</span>
+        <span id="period-<%=widget.position%>">AM</span>
+      </div>
+    </div>
+  </div>
+</div>

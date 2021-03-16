@@ -1,0 +1,32 @@
+<style>
+    .weather {
+        background-size: contain;
+    }
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification has-text-white p-0">
+        <div class="columns is-gapless">
+            <div class="columns is-gapless weather pl-5 pr-6 pt-5 m-0" id="weatherWidget1-<%=widget.position%>">
+                <div class="column">
+                    <img src="/img/weather_icon/09n.png" id="weatherIcon1-<%=widget.position%>" />
+                </div>
+                <div class="column is-narrow">
+                    <h1 class="subtitle is-4" style="text-transform: capitalize;" id="weatherDescription1-<%=widget.position%>">Sunny</h1>
+                    <h1 class="title is-3" id="weatherTemperature1-<%=widget.position%>">36°</h1>
+                    <p id="weatherCity1-<%=widget.position%>" class="pb-4">San Francisco</p>
+                </div>
+            </div>
+            <div class="columns is-gapless weather pl-5 pr-6 pt-5 m-0" id="weatherWidget2-<%=widget.position%>">
+                <div class="column">
+                    <img src="/img/weather_icon/09n.png" id="weatherIcon2-<%=widget.position%>" />
+                </div>
+                <div class="column is-narrow">
+                    <h1 class="subtitle is-4" style="text-transform: capitalize;" id="weatherDescription2-<%=widget.position%>">Sunny</h1>
+                    <h1 class="title is-3" id="weatherTemperature2-<%=widget.position%>">36°</h1>
+                    <p id="weatherCity2-<%=widget.position%>" class="pb-4">San Francisco</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

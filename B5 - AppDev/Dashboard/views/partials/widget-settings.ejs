@@ -1,0 +1,171 @@
+<style>
+
+.drop__container{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.drop__card, .drop__data{
+  display: flex;
+  align-items: center;
+}
+
+.drop__card{
+  justify-content: space-between;
+  padding: .75rem 1.25rem .75rem .75rem;
+  background-color: var(--first-color-lighten);
+  box-shadow: 4px 4px 16px #E1E1E1, -2px -2px 16px #FFF;
+  border-radius: 1.5rem;
+}
+
+.icon{
+  font-size: 1.25rem;
+}
+
+</style>
+
+    <div class="drop__container" id="drop-items">
+        <%
+
+if (widgets.length == 0) { %>
+    <p><b>Vous n'avez pas encore de Widgets :-( </b>  Ajoutez en via la page <a href="/widgets">"Widgets"</a></p>
+<%}
+
+
+for (let i = 1; i <= user.widgetnumber; i++) {
+    var actualwidget = widgets.filter(widget => widget.position === i);
+    if (actualwidget.length > 0) {
+        actualwidget.forEach(function(widget) {
+            if (widget.widgetname == "liveweather") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/weather_icon/02d.png",
+                title: "Météo en direct",
+                subtitle: "Météo",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "doubleweather") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/weather_icon/01d.png",
+                title: "Météo (Double)",
+                subtitle: "Météo",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "weekweather") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/weather_icon/09d.png",
+                title: "Météo sur 5 Jours",
+                subtitle: "Météo",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "epitechinfos") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/Epitech-Icon.png",
+                title: "Epitech Intranet",
+                subtitle: "Infos",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "numerictime") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/numericclock.svg",
+                title: "Date et Heure : Numérique",
+                subtitle: "Horloge",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "analogictime") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/clock.png",
+                title: "Date et Heure : Analogic",
+                subtitle: "Horloge",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "currencyconverter") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/currecyconverter.png",
+                title: "Convertisseur de devises",
+                subtitle: "Bourse",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "stockexchanges") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/stockexchanges.png",
+                title: "Cours Boursier",
+                subtitle: "Bourse",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "findmovie") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/film_icon.png",
+                title: "Movie Finder",
+                subtitle: "Movie",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "cinemalist") {%>
+                <%- include('./setting-tile', {
+                iconname: "img/cinema_icon.png",
+                title: "Cinema List",
+                subtitle: "Cinema",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "twitteraccount") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/twitter_icon.png",
+                title: "Twitter Account",
+                subtitle: "Twitter",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "googlenews") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/news_icon.png",
+                title: "Google News",
+                subtitle: "Google",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "serverpinger") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/google.png",
+                title: "Server Pinger",
+                subtitle: "serverpinger",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "sickness") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/virus_icon.png",
+                title: "Sickness",
+                subtitle: "sickness",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "githubaccount") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/github_icon.png",
+                title: "Github Profile Search",
+                subtitle: "Github",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}  if (widget.widgetname == "googlecalendar") {%>
+                <%- include('./setting-tile', {
+                iconname: "/img/googlecalendar.png",
+                title: "Google Calendar",
+                subtitle: "Google",
+                widgetname: widget.widgetname,
+                position: widget.position,
+            }); -%>
+            <%}
+      })
+    }
+}
+%>

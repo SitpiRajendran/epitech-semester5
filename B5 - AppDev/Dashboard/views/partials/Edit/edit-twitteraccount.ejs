@@ -1,0 +1,13 @@
+<div class="field">
+    <label class="label">Taux de Rafraichissement</label>
+    <div class="control">
+      <input type="range" name="param1" min="30000" max="300000" step="10000" value="<%= widget.param1 %>" id="param1" onchange="updateTextInput(this.value);"/>
+      <output id="textOutput" value="<%= widget.param1 %>">
+    </div>
+    <p class="help">en ms - Minimum 30.000</p>
+</div>
+<script>
+  function updateTextInput(val) {
+            document.getElementById('textOutput').value=val; 
+          }
+  </script>

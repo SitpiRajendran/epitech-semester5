@@ -1,0 +1,40 @@
+<style>
+    .currency {
+        background: linear-gradient(135deg, #ec6262, #db64db);
+        background-size: cover;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 10em;
+        border: 0;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        outline: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-primary currency" id="ConverterWidget-<%=widget.position%>">
+        <div class="columns is-gapless">
+            <div class="column is-half">
+                <input class="form__field" id="ConverterDataFirst-<%=widget.position%>" value="1"
+                    oninput="updateCurrency(<%=widget.position%>);"></h3>
+                <h3 class="subtitle is-4 has-text-centered mt-2" id="ConverterSymbolFirst-<%=widget.position%>">EUR
+                </h3>
+            </div>
+            <div class="column is-half">
+                <h3 class="subtitle is-4 has-text-centered" id="ConverterDataSecond-<%=widget.position%>">1</h3>
+                <h3 class="subtitle is-4 has-text-centered" id="ConverterSymbolSecond-<%=widget.position%>">USD</h3>
+            </div>
+        </div>
+    </div>
+</div>

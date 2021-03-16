@@ -1,0 +1,36 @@
+<div class="field">
+  <label class="label">Taux de Rafraichissement</label>
+  <div class="control">
+    <input type="range" name="param1" min="30000" max="300000" step="10000" value="<%= widget.param1 %>" id="param1"
+      onchange="updateTextInput(this.value);" />
+    <output id="textOutput" value="<%= widget.param1 %>">
+  </div>
+  <p class="help">en ms - Minimum 30 000</p>
+</div>
+<div class="field">
+  <label class="label">Langues des Articles</label>
+  <div class="select">
+    <select name="param2" id="param2">
+      <option value="fr" label="Français">fr</option>
+      <option value="en" label="English">en</option>
+      <option value="de" label="Deutsche">de</option>
+      <option value="es" label="Espnñol">es</option>
+      <option value="pt" label="Português">pt</option>
+    </select>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Trier par :</label>
+  <div class="select">
+    <select name="param3" id="param3">
+      <option value="publishedAt" label="Plus récent">publishedAt</option>
+      <option value="relevancy" label="Plus proche">relevancy</option>
+      <option value="popularity" label="Populaire">popularity</option>
+    </select>
+  </div>
+</div>
+<script>
+  function updateTextInput(val) {
+    document.getElementById('textOutput').value = val;
+  }
+</script>

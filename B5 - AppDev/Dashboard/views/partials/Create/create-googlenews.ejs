@@ -1,0 +1,37 @@
+<style>
+    .News {
+        background-size: cover;
+    }
+</style>
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification is-light weather" id="NewsWidget-<%=widget.position%>">
+        <div class="columns">
+            <div class="column">
+                <input class="form_field input" id="SearchNews-<%=widget.position%>" value="Ecologie"></h3>
+            </div>
+            <div class="column">
+                <button class="button" onclick="StartNewsUpdate()">Rechercher</button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column" style="margin-top: 0.5em;">
+                <a id="NewsLink-<%=widget.position%>" href="">
+                    <h3 class="title is-6" style="text-transform: capitalize;" id="NewsTitle-<%=widget.position%>">Une
+                        News Incroyable</h3>
+                </a>
+                <h1 class="subtitle is-6" id="NewsPaper-<%=widget.position%>">C'est un article interessant en effet.
+                </h1>
+                <p id="NewsDate-<%=widget.position%>">2020-11-26</p>
+            </div>
+            <div class="column" style="margin-top: 0.5em;">
+                <a id="NewsLink2-<%=widget.position%>" href="">
+                    <h3 class="title is-6" style="text-transform: capitalize;" id="NewsTitle2-<%=widget.position%>">Une
+                        News Incroyable</h3>
+                </a>
+                <h1 class="subtitle is-6" id="NewsPaper2-<%=widget.position%>">C'est un article interessant en effet.
+                </h1>
+                <p id="NewsDate2-<%=widget.position%>">2020-11-26</p>
+            </div>
+        </div>
+    </div>
+</div>

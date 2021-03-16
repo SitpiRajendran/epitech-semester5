@@ -1,0 +1,30 @@
+Documentation de Dashboard :
+    Écran de connexion:
+        Si vous avez un compte “connectez-vous".
+        Si vous n’en avez pas, cliquez sur s’inscrire, ou si vous le souhaitez sur “se connecter avec google”.
+        Si vous avez cliqué sur “s’inscrire”, vous arrivez sur une page, remplissez le formulaire.
+        Une fois terminé vous serez renvoyé sur la page de connexion ou vous pourrez alors vous connecter.
+
+    Widgets:
+        Lors de votre connexion sur le site vous arriverez sur une page Dashboard.
+        Si c’est votre première connexion, cette page sera vide.
+        Sinon, vos anciens widgets seront rechargés.
+
+        Pour ajouter, modifier ou supprimer des widgets, rendez-vous dans l’onglet sous Dashboard, nommé “widgets”.
+        Si vous voulez ajouter un widget, cliquer sur “Ajouter” sous le widget voulu, un formulaire s’ouvrira pour affiner,
+        et paramétrer le widget qui sera ajouté. Une fois le formulaire rempli et ajouter,
+        visualisez votre nouveau widget dans l’onglet Dashboard.
+
+        Il existe plusieurs widgets de plusieurs catégories:
+            Horloge:
+                - Horloge Numérique
+                - Horloge Analogique
+
+            Météo:
+                - Temps Actuel
+                - Temps sur une semaine
+                - Météo Double
+
+    Qui sommes-nous ?
+        Avant de vous connecter, vous pouvez scroller vers le bas pour tomber sur notre page “qui sommes-nous ?”.
+        Vous pourrez en savoir un peu plus sur les supers développeurs de ce site.

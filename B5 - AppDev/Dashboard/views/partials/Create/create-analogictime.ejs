@@ -1,0 +1,253 @@
+<style>
+	.analogicWidget {
+		background: #192187;
+	}
+
+	.clock {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+		border-radius: 50%;
+		background-color: #fff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-45%, 0%);
+	}
+
+	.clock:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(285deg, rgba(0, 0, 0, 0.175) 50%, rgba(0, 0, 0, 0.1) 50%);
+	}
+
+	.clock:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		background-color: black;
+		border-radius: 50%;
+	}
+
+	.num {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 700;
+		padding: 18px;
+	}
+
+	.num:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 5px;
+		height: 15px;
+		background-color: black;
+	}
+
+	.num1 {
+		transform: rotate(30deg);
+	}
+
+	.num1 div {
+		transform: rotate(-30deg);
+	}
+
+	.num2 {
+		transform: rotate(60deg);
+	}
+
+	.num2 div {
+		transform: rotate(-60deg);
+	}
+
+	.num3 {
+		transform: rotate(90deg);
+	}
+
+	.num3 div {
+		transform: rotate(-90deg);
+	}
+
+	.num4 {
+		transform: rotate(120deg);
+	}
+
+	.num4 div {
+		transform: rotate(-120deg);
+	}
+
+	.num5 {
+		transform: rotate(150deg);
+	}
+
+	.num5 div {
+		transform: rotate(-150deg);
+	}
+
+	.num6 {
+		transform: rotate(180deg);
+	}
+
+	.num6 div {
+		transform: rotate(-180deg);
+	}
+
+	.num7 {
+		transform: rotate(210deg);
+	}
+
+	.num7 div {
+		transform: rotate(-210deg);
+	}
+
+	.num8 {
+		transform: rotate(240deg);
+	}
+
+	.num8 div {
+		transform: rotate(-240deg);
+	}
+
+	.num9 {
+		transform: rotate(270deg);
+	}
+
+	.num9 div {
+		transform: rotate(-270deg);
+	}
+
+	.num10 {
+		transform: rotate(300deg);
+	}
+
+	.num10 div {
+		transform: rotate(-300deg);
+	}
+
+	.num11 {
+		transform: rotate(330deg);
+	}
+
+	.num11 div {
+		transform: rotate(-330deg);
+	}
+
+	.hand {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hand div {
+		position: absolute;
+		bottom: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #000;
+	}
+
+	.sec {
+		width: 1px;
+		height: 40%;
+	}
+
+	.min {
+		height: 38%;
+		width: 4px;
+		border-radius: 2px;
+	}
+
+	.hours {
+		height: 28%;
+		width: 8px;
+		border-radius: 4px;
+	}
+
+	@media screen and (min-width: 768px) {
+		.clock {
+			transform: translate(-50%, -50%);
+		}
+	}
+</style>
+
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+	<div class="notification is-info analogicWidget" id="analogicWidget-<%=widget.position%>">
+		<div class="columns is-gapless m-0">
+			<div class="column clockdiv">
+				<div class="clock">
+					<div class="num num1">
+						<div>1</div>
+					</div>
+					<div class="num num2">
+						<div>2</div>
+					</div>
+					<div class="num num3">
+						<div>3</div>
+					</div>
+					<div class="num num4">
+						<div>4</div>
+					</div>
+					<div class="num num5">
+						<div>5</div>
+					</div>
+					<div class="num num6">
+						<div>6</div>
+					</div>
+					<div class="num num7">
+						<div>7</div>
+					</div>
+					<div class="num num8">
+						<div>8</div>
+					</div>
+					<div class="num num9">
+						<div>9</div>
+					</div>
+					<div class="num num10">
+						<div>10</div>
+					</div>
+					<div class="num num11">
+						<div>11</div>
+					</div>
+					<div class="num num12">
+						<div>12</div>
+					</div>
+
+					<div class="hand" id="sec-<%=widget.position%>">
+						<div class="sec"></div>
+					</div>
+					<div class="hand" id="min-<%=widget.position%>">
+						<div class="min"></div>
+					</div>
+					<div class="hand" id="hours-<%=widget.position%>">
+						<div class="hours"></div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="date">
+					<h1 class="subtitle is-4 m-0 mt-5 is-bold" id="dayname1-<%=widget.position%>">Day 00</span></h1>
+					<h1 class="subtitle is-4 m-0" id="month1-<%=widget.position%>">Month</span></h1>
+					<h1 class="subtitle is-4" id="year1-<%=widget.position%>">Year</span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<style>
+    .ping {
+        background: linear-gradient(rgb(78, 87, 211), rgb(122, 50, 189));
+    }
+</style>
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+    <div class="notification ping has-text-white" id="ServerWidget-<%=widget.position%>">
+        <div class="columns">
+            <div class="column">
+                <h1 class="title is-4" id="ServerName-<%=widget.position%>"></h1>
+            </div>
+            <div class="column"">
+                <h1 class=" subtitle is-4" id="ServerStatus-<%=widget.position%>">
+                </h1>
+            </div>
+            <div class="column"">
+            </div>
+        </div>
+        <div class=" columns">
+                <div class="column">
+                    <h1 class="title is-4" id="ServerName2-<%=widget.position%>"></h1>
+                </div>
+                <div class="column">
+                    <h1 class="subtitle is-4" id="ServerStatus2-<%=widget.position%>"></h1>
+                </div>
+                <div class="column"">
+                    <h1 class=" subtitle is-6 has-text-right-desktop"> Updating every <%=widget.param1%> ms</h1>
+                </div>
+            </div>
+        </div>
+    </div>

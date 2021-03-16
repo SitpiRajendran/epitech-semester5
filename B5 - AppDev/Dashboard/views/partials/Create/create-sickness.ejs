@@ -1,0 +1,30 @@
+<style>
+</style>
+<div class="column is-half-desktop is-full-tablet is-full-mobile">
+
+    <div class="notification is-danger weather" id="SicknessWidget-<%=widget.position%>">
+        <div class="columns is-gapless m-0">
+            <div class="column is-narrow">
+                <h1 class="title is-4" id="SicknessName-<%=widget.position%>" class="title is-4 has-text-centered">Coronavirus (Covid-19)</h1>
+            </div>
+            <div class="column ml-2 has-text-right">
+                <p id="SicknessDate-<%=widget.position%>"></p>
+                <p id="SicknessRegion-<%=widget.position%>"></p>
+            </div>
+        </div>
+        <div class="columns is-gapless">
+            <div class="column">
+                <h3 class="subtitle is-4 m-0 mb-1" style="text-transform: capitalize;" >Cas:</h3>
+                <p id="SicknessHill-<%=widget.position%>">Nan</p>
+            </div>
+            <div class="column">
+                <h3 class="subtitle is-4 m-0 mb-1" style="text-transform: capitalize;">Morts:</h3>
+                <p id="SicknessDead-<%=widget.position%>">Nan</p>
+            </div>
+            <div class="column">
+                <h3 class="subtitle is-4 m-0 mb-1" style="text-transform: capitalize;">Soignés:</h3>
+                <p id="SicknessHealed-<%=widget.position%>">Nan</p>
+            </div>
+        </div>
+    </div>
+</div>

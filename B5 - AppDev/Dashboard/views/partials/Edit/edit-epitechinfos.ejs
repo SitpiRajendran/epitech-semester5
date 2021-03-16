@@ -1,0 +1,33 @@
+<div class="field">
+    <label class="label">Taux de Rafraichissement</label>
+    <div class="control">
+        <input type="range" name="param1" min="30000" max="300000" step="10000" value="<%= widget.param1 %>" id="param1"
+            onchange="updateTextInput(this.value);" />
+        <output id="textOutput" value="<%= widget.param1 %>">
+    </div>
+    <p class="help">en ms - Minimum 30 000</p>
+</div>
+<div class="field">
+    <label class="label">Autologin</label>
+    <div class="control">
+        <input class="input" type="text"
+            placeholder="https://intra.epitech.eu/auth-a0a000aa00a000aa00aaa0aa0a0aa00aa000aa00" name="param2"
+            id="param2" value="<%= widget.param2 %>" required>
+    </div>
+    <p class="help">Votre lien d'autologin se trouve dans la rubrique Administration de l'Intranet d'Epitech <a
+            href="https://intra.epitech.eu/admin/autolog" target="_blank">(ici)</a></p>
+</div>
+<div class="field">
+    <label class="label">Mail Epitech</label>
+    <div class="control">
+        <input class="input" type="text" placeholder="Prénom.Nom@Epitech.eu" name="param3" id="param3"
+            value="<%= widget.param3 %>" required>
+    </div>
+    <p class="help">Votre mail d'Epitech est necessaire pour l'accès à vos informations scolaire</p>
+</div>
+
+<script>
+    function updateTextInput(val) {
+        document.getElementById('textOutput').value = val;
+    }
+</script>
