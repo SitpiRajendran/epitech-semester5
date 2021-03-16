@@ -1,0 +1,11 @@
+# Temp
+*~
+# Build
+.DS_Store
+
+# Scripts
+launchdocker.sh
+plugins.txt
+
+# Docker
+Dockerfile

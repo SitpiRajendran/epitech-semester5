@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: result-ingress
+spec:
+  rules:
+    - host: result.dop.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: result-service
+              servicePort: 80

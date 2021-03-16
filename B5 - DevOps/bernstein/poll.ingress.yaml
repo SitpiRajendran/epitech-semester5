@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: poll-ingress
+spec:
+  rules:
+    - host: poll.dop.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: poll-service
+              servicePort: 80
