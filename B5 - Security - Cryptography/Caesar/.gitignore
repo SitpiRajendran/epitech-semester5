@@ -1,0 +1,10 @@
+#Python useless Files
+*.pyc
+__pycache__
+
+#Binary
+challenge01
+challenge02
+challenge03
+challenge04
+challenge05

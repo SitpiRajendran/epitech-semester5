@@ -1,0 +1,10 @@
+#Env
+__pycache__*
+node_modules/
+
+#Logs
+output
+API/Logs/*
+
+#Tests
+test_api.py
