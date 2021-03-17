@@ -1,3 +1,7 @@
+## Marks
+
+**GRADE : C**
+
 01 - Convert hex to base64 - **100%** <br>
 02 - Fixed XOR - **98%** <br>
 < A5-4 - XOR two 1024-character hex buffers - KO Ooutput differers  <br>
