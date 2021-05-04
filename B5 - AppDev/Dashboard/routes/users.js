@@ -35,10 +35,10 @@ router.post('/register', (req, res) => {
         });
     } else {
         const transporter = nodemailer.createTransport({
-        service: 'hotmail',
+        service: 'gmail',
         auth: {
-            user: 'sitpi@hotmail.fr',
-            pass: '28112000'
+            user: '******@gmail.com',
+            pass: '**********'
         }
         });
 
